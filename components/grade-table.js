@@ -18,7 +18,7 @@ updateGrades(grades){
   //   tr.append(tdName,tdCourse,tdGrade)
   tbody.append(this.renderGradeRow(grades[i],this.deleteGrade))
   }
-  if(!grades){
+  if(grades.length===0){
     pElement.classList.remove('d-none')
   }else{
     pElement.className="d-none"
