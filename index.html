@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -12,32 +13,59 @@
       <h1 class="col-8">Student Grade Table</h1>
       <h3 class="col-4">Average Grade <span></span></h3>
     </header>
-  </div>
 
-<table class="table table-striped">
-  <thead class="thead-dark">
-    <th>Student Name</th>
-    <th>Course</th>
-    <th>Grade</th>
-  </thead>
-  <tbody>
-    <!-- <tr>
-      <td>Tim Berners-Lee</td>
-      <td>Web Development</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <td>Scott Bowler</td>
-      <td>Web Development</td>
-      <td>100</td>
-    </tr>
-    <tr>
-      <td>Tim Davis</td>
-      <td>Web Development</td>
-      <td>50</td>
-    </tr> -->
-  </tbody>
-</table>
+  <div class="table_container col-9">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <th>Student Name</th>
+        <th>Course</th>
+        <th>Grade</th>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>Tim Berners-Lee</td>
+          <td>Web Development</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Scott Bowler</td>
+          <td>Web Development</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>Tim Davis</td>
+          <td>Web Development</td>
+          <td>50</td>
+        </tr> -->
+      </tbody>
+    </table>
+  </div>
+  <div class="form_container col-3">
+    <form>
+      <div class="input-group mb-3s">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fa fa-user" aria-hidden="true"></i></span>
+        </div>
+          <input name="name" type="text" class="form-control" placeholder="Name">
+      </div>
+      <div class="input-group mb-3s">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon2"><i class="fa fa-list-alt" aria-hidden="true"></i></span>
+        </div>
+          <input name="course" type="text" class="form-control" placeholder="Course">
+      </div>
+      <div class="input-group mb-3s">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3"><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
+        </div>
+          <input name="grade" type="number" class="form-control" placeholder="Number">
+      </div>
+        <button type="submit" class="btn btn-success">Add</button>
+        <button type="reset" class="btn btn-outline-secondary">Cancel</button>
+    </form>
+  </div>
+</div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 <script src="components/app.js"></script>
