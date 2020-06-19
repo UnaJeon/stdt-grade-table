@@ -4,9 +4,9 @@ this.tableElement = tableElement
 this.noGradesElement = noGradesElement
   }
 updateGrades(grades){
-  var tbody = this.tableElement.querySelector('tbody')
+  const tbody = this.tableElement.querySelector('tbody')
   tbody.textContent = ''
-  for (var i=0; i<grades.length; i++){
+  for (let i=0; i<grades.length; i++){
   //   var tr = document.createElement('tr');
   //   var tdName = document.createElement('td');
   //   tdName.textContent = grades[i].name
@@ -28,21 +28,21 @@ onDeleteClick(deleteGrade){
   this.deleteGrade= deleteGrade
 }
 renderGradeRow(data,deleteGrade){
-    var tableRow= document.createElement('tr')
-    var studentName = document.createElement('td');
+    const tableRow= document.createElement('tr')
+    const studentName = document.createElement('td');
     studentName.textContent=data.name
-    var studnetCourse = document.createElement('td')
+    const studnetCourse = document.createElement('td')
     studnetCourse.textContent = data.course
-    var studentGrade = document.createElement('td');
+    const studentGrade = document.createElement('td');
     studentGrade.textContent = data.grade
-    var buttonData= document.createElement('td')
-    var deleteButton = document.createElement('button')
+    const buttonData= document.createElement('td')
+    const deleteButton = document.createElement('button')
     deleteButton.textContent = "DELETE"
     deleteButton.setAttribute("class","btn btn-danger" )
     tableRow.append(studentName,studnetCourse,studentGrade,buttonData)
     buttonData.append(deleteButton)
 
-    deleteButton.addEventListener('click',function(event){
+    deleteButton.addEventListener('click',()=>{
       deleteGrade(data.id)
     })
     return tableRow;
